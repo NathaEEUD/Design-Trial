@@ -169,6 +169,14 @@ hr {
   border: 0.5px solid var(--color-muted);
 }
 
+.icon--sm {
+  width: 15px;
+}
+
+.icon--md {
+  width: 25px;
+}
+
 .avatar {
   border-radius: 50%;
 }
