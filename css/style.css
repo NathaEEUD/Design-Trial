@@ -94,4 +94,41 @@ main {
   width: 38px;
   height: 38px;
 }
+
+.button {
+  padding: 8px 12px;
+  max-height: var(--button-max-height);
+  line-height: var(--line-height-normal);
+  border: var(--border-width-default) solid var(--color-transparent);
+  border-radius: var(--border-radius-xs);
+  font-family: var(--font-family-sans);
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.button--primary {
+  background-color: var(--color-secondary);
+}
+
+.button--primary:hover {
+  background-color: var(--color-white);
+  border: var(--border-width-default) solid var(--color-secondary);
+}
+
+.button--secondary {
+  background-color: var(--color-tertiary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-white);
+  border: var(--border-width-default) solid var(--color-tertiary);
+}
 /*# sourceMappingURL=style.css.map */

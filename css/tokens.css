@@ -18,7 +18,7 @@
   --font-family-sans: "San Francisco", sans-serif;
   --font-family-mono: "Roboto Mono", "Courier New", monospace;
 
-  --font-size-base: 10px;
+  --font-size-base: 8px;
   --font-size-xs: 1.1rem;
   --font-size-sm: 1.3rem;
   --font-size-md: 1.5rem;
@@ -54,6 +54,7 @@
   --box-shadow-sm: 0px 4px 5px #e8e8e8;
 
   --border-radius-none: 0;
+  --border-radius-xs: 5px;
   --border-radius-sm: 10px;
   --border-radius-md: 20px;
   --border-radius-lg: 30px;
@@ -80,9 +81,10 @@
   --color-secondary: #18D399;
   --color-tertiary: #D1DFF0;
   --color-muted: #EAEAEA;
+  --color-white: #FFFFFF;
   --background-color-primary: #EFF5F9;
 
-  --button-max-width: 300px;
+  --button-max-height: 36px;
 
   --input-height: 38px;
 }

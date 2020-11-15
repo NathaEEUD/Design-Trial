@@ -74,3 +74,37 @@ main {
     height: 38px;
   }
 }
+
+.button {
+  padding: 8px 12px;
+  max-height: var(--button-max-height);
+  line-height: var(--line-height-normal);
+  border: var(--border-width-default) solid var(--color-transparent);
+  border-radius: var(--border-radius-xs);
+  font-family: var(--font-family-sans);
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  gap: 8px;
+
+  &--primary {
+    background-color: var(--color-secondary);
+
+    &:hover {
+      background-color: var(--color-white);
+      border: var(--border-width-default) solid var(--color-secondary);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--color-tertiary);
+
+    &:hover {
+      background-color: var(--color-white);
+      border: var(--border-width-default) solid var(--color-tertiary);
+    }
+  }
+}
