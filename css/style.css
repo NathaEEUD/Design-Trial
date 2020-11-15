@@ -55,7 +55,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: header;
-  padding: 0 20px;
+  padding: 0 var(--spacing-sm);
   background-color: var(--color-primary);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,7 +75,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: var(--spacing-xs);
 }
 
 aside {
@@ -89,13 +89,13 @@ aside {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: main;
-  margin: 20px;
+  margin: var(--spacing-sm);
   background-color: var(--color-white);
   border-radius: var(--border-radius-sm);
 }
 
 .main__info {
-  padding: 20px;
+  padding: var(--spacing-sm);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,7 +107,20 @@ aside {
           align-items: center;
 }
 
+.main__description {
+  padding: var(--spacing-sm);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
 hr {
+  margin: 0;
   border: 0.5px solid var(--color-muted);
 }
 
@@ -200,11 +213,26 @@ hr {
           flex-direction: column;
 }
 
+.typography--secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: var(--spacing-xs);
+}
+
+.typography--secondary .heading--default {
+  min-width: 270px;
+  text-align: right;
+}
+
 .buttons--primary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: var(--spacing-xs);
 }
 
 .card--primary {
@@ -214,7 +242,29 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: var(--spacing-sm);
+}
+
+.form--primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.description--primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.description--primary .heading--tertiary {
+  display: inline-block;
+  min-width: 80px;
 }
 
 .m--light {

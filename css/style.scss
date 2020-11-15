@@ -49,7 +49,7 @@ body {
 
 .header {
   grid-area: header;
-  padding: 0 20px;
+  padding: 0 var(--spacing-sm);
   background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
@@ -58,7 +58,7 @@ body {
   &__profile {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: var(--spacing-xs);
   }
 }
 
@@ -69,20 +69,28 @@ aside {
 
 .main {
   grid-area: main;
-  margin: 20px;
+  margin: var(--spacing-sm);
   background-color: var(--color-white);
   border-radius: var(--border-radius-sm);
 
   &__info {
-    padding: 20px;
+    padding: var(--spacing-sm);
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__description {
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
   }
 }
 
 // Atoms
 hr {
+  margin: 0;
   border: 0.5px solid var(--color-muted);
 }
 
@@ -168,12 +176,23 @@ hr {
     display: flex;
     flex-direction: column;
   }
+
+  &--secondary {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--spacing-xs);
+
+    .heading--default {
+      min-width: 270px;
+      text-align: right;
+    }
+  }
 }
 
 .buttons {
   &--primary {
     display: flex;
-    gap: 10px;
+    gap: var(--spacing-xs);
   }
 }
 
@@ -182,7 +201,27 @@ hr {
   &--primary {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: var(--spacing-sm);
+  }
+}
+
+.form {
+  &--primary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}
+
+// Templates
+.description {
+  &--primary {
+    display: flex;
+
+    .heading--tertiary {
+      display: inline-block;
+      min-width: 80px;
+    }
   }
 }
 

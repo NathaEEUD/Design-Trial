@@ -1,9 +1,9 @@
 :root {
   --spacing-none: 0;
-  --spacing-xs: 5;
-  --spacing-sm: 15;
-  --spacing-md: 20;
-  --spacing-lg: 40;
+  --spacing-xxs: 5px;
+  --spacing-xs: 10px;
+  --spacing-sm: 20px;
+  --spacing-md: 40px;
 
   --media-query-min-width-sm: 576px;
   --media-query-min-width-md: 768px;
@@ -85,6 +85,8 @@
   --background-color-primary: #EFF5F9;
 
   --button-max-height: 36px;
+
+  --heading-max-width: 270px;
 
   --input-height: 38px;
 }
