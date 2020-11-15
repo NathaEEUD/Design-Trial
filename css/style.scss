@@ -44,12 +44,32 @@ body {
   grid-template-rows: 60px auto;
   grid-template-areas:
     "header header"
-    "sidebar main";
+    "aside main";
+  scrollbar-width: thin;
+  scrollbar-color: var(--background-color-tertiary) transparent;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--background-color-tertiary);
+    border-radius: 3.5px;
+    border: none;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+  }
 }
 
 .header {
   grid-area: header;
-  padding: 0 var(--spacing-sm);
+  padding: 0 var(--spacing-md);
   background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
@@ -62,26 +82,41 @@ body {
   }
 }
 
-aside {
-  grid-area: sidebar;
-  border: 1px solid steelblue;
+.aside {
+  grid-area: aside;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr 1px 1fr;
+
+  &__top {
+    padding: var(--spacing-md);
+  }
+
+  &__bottom {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    overflow-y: scroll;
+  }
 }
 
 .main {
   grid-area: main;
-  margin: var(--spacing-sm);
+  margin: var(--spacing-md);
   background-color: var(--color-white);
   border-radius: var(--border-radius-sm);
 
   &__info {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__description {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
@@ -121,7 +156,13 @@ hr {
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: inline-flex;
+  align-items: center;
   gap: 8px;
+
+  &--default {
+    padding: 0;
+    background-color: transparent;
+  }
 
   &--primary {
     background-color: var(--color-secondary);
@@ -139,6 +180,11 @@ hr {
       background-color: var(--color-white);
       border: var(--border-width-default) solid var(--color-tertiary);
     }
+  }
+
+  &--tertiary {
+    @extend .button--primary;
+    padding: 0 var(--spacing-md);
   }
 }
 
@@ -168,6 +214,35 @@ hr {
     font-weight: 300;
     line-height: var(--line-height-relaxed);
   }
+
+  &--xs {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: var(--line-height-snug);
+  }
+}
+
+.text {
+  font-size: 14px;
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-normal);
+
+  &--default {
+    color: var(--color-primary);
+  }
+
+  &--light {
+    color: var(--color-light);
+  }
+}
+
+.day {
+  padding: var(--spacing-sm);
+
+  &--highlight {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-sm);
+  }
 }
 
 // Molecules
@@ -189,19 +264,12 @@ hr {
   }
 }
 
-.buttons {
-  &--primary {
-    display: flex;
-    gap: var(--spacing-xs);
-  }
-}
-
 // Organisms
 .card {
   &--primary {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
   }
 }
 
@@ -213,7 +281,48 @@ hr {
   }
 }
 
+.calendar {
+  &__header {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__body {
+    width: 100%;
+    text-align: center;
+
+    thead td {
+      padding-bottom: var(--spacing-xs);
+    }
+
+    tbody tr td:first-child,
+    tbody tr td:last-child {
+      background-color: var(--background-color-secondary);
+    }
+
+    tbody tr:first-child td:first-child,
+    tbody tr:first-child td:last-child {
+      border-top-left-radius: var(--border-radius-sm);
+      border-top-right-radius: var(--border-radius-sm);
+    }
+
+    tbody tr:last-child td:first-child,
+    tbody tr:last-child td:last-child {
+      border-bottom-left-radius: var(--border-radius-sm);
+      border-bottom-right-radius: var(--border-radius-sm);
+    }
+  }
+}
+
 // Templates
+.container {
+  &--primary {
+    display: flex;
+    gap: var(--spacing-xs);
+  }
+}
+
 .description {
   &--primary {
     display: flex;

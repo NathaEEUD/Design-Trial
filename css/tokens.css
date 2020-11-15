@@ -2,8 +2,8 @@
   --spacing-none: 0;
   --spacing-xxs: 5px;
   --spacing-xs: 10px;
-  --spacing-sm: 20px;
-  --spacing-md: 40px;
+  --spacing-sm: 15px;
+  --spacing-md: 20px;
 
   --media-query-min-width-sm: 576px;
   --media-query-min-width-md: 768px;
@@ -80,9 +80,12 @@
   --color-primary: #172C45;
   --color-secondary: #18D399;
   --color-tertiary: #D1DFF0;
+  --color-light: #C6CFDA;
   --color-muted: #EAEAEA;
   --color-white: #FFFFFF;
   --background-color-primary: #EFF5F9;
+  --background-color-secondary: #F0F5FA;
+  --background-color-tertiary: #B7B7B7;
 
   --button-max-height: 36px;
 
