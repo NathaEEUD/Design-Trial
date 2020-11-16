@@ -19,12 +19,13 @@
   --font-family-mono: "Roboto Mono", "Courier New", monospace;
 
   --font-size-base: 8px;
-  --font-size-xs: 1.1rem;
-  --font-size-sm: 1.3rem;
-  --font-size-md: 1.5rem;
-  --font-size-lg: 1.8rem;
-  --font-size-xl: 2.1rem;
-  --font-size-2xl: 6rem;
+  --font-size-xxs: 1rem;
+  --font-size-xs: 1.5rem;
+  --font-size-sm: 1.75rem;
+  --font-size-md: 2.25rem;
+  --font-size-lg: 3rem;
+  --font-size-xl: 5rem;
+  --font-size-2xl: 7rem;
 
   --font-weight-hairline: 100;
   --font-weight-thin: 200;
@@ -92,9 +93,9 @@
   --color-blue-munsell: #168FAD;
   --color-lavender-floral: #AF7BD4;
 
+  --header-height: 60px;
+  --aside-width: 390px;
   --button-max-height: 36px;
-
-  --heading-max-width: 270px;
-
-  --input-height: 38px;
+  --heading-default-min-width: 270px;
+  --heading-tertiary-min-width: 80px;
 }

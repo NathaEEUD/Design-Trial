@@ -28,6 +28,7 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
 }
 
 html,
@@ -40,8 +41,8 @@ p {
 body {
   background-color: var(--background-color-primary);
   display: grid;
-  grid-template-columns: 390px 1fr;
-  grid-template-rows: 60px auto;
+  grid-template-columns: var(--aside-width) 1fr;
+  grid-template-rows: var(--header-height) auto;
   grid-template-areas:
     "header header"
     "aside main";
@@ -180,7 +181,7 @@ hr {
   border: var(--border-width-default) solid var(--color-transparent);
   border-radius: var(--border-radius-xs);
   font-family: var(--font-family-sans);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
   cursor: pointer;
@@ -222,38 +223,38 @@ hr {
   color: var(--color-primary);
 
   &--default {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-normal);
   }
 
   &--primary {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-relaxed);
   }
 
   &--secondary {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
     line-height: var(--line-height-normal);
   }
 
   &--tertiary {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-light);
     line-height: var(--line-height-relaxed);
   }
 
   &--xs {
-    font-size: 12px;
-    font-weight: 700;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-snug);
   }
 }
 
 .text {
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-normal);
 
@@ -262,7 +263,7 @@ hr {
   }
 
   &--secondary {
-    font-size: 8px;
+    font-size: var(--font-size-xxs);
     font-weight: var(--font-weight-medium);
     line-height: var(--line-height-tight);
   }
@@ -302,7 +303,7 @@ hr {
     gap: var(--spacing-xs);
 
     .heading--default {
-      min-width: 270px;
+      min-width: var(--heading-default-min-width);
       text-align: right;
     }
   }
@@ -373,7 +374,7 @@ hr {
 
     .heading--tertiary {
       display: inline-block;
-      min-width: 80px;
+      min-width: var(--heading-tertiary-min-width);
     }
   }
 }
