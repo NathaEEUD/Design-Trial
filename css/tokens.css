@@ -83,9 +83,14 @@
   --color-light: #C6CFDA;
   --color-muted: #EAEAEA;
   --color-white: #FFFFFF;
+
   --background-color-primary: #EFF5F9;
   --background-color-secondary: #F0F5FA;
   --background-color-tertiary: #B7B7B7;
+
+  --color-ultra-red: #F77883;
+  --color-blue-munsell: #168FAD;
+  --color-lavender-floral: #AF7BD4;
 
   --button-max-height: 36px;
 

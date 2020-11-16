@@ -191,6 +191,35 @@ hr {
   height: 100px;
 }
 
+.avatar--color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.avatar--color--pto {
+  background-color: var(--color-ultra-red);
+}
+
+.avatar--color--bday {
+  background-color: var(--color-blue-munsell);
+}
+
+.avatar--color--year {
+  background-color: var(--color-lavender-floral);
+}
+
 .button {
   padding: 8px 12px;
   max-height: var(--button-max-height);
@@ -284,17 +313,31 @@ hr {
   color: var(--color-primary);
 }
 
+.text--secondary {
+  font-size: 8px;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
 .text--light {
   color: var(--color-light);
 }
 
 .day {
   padding: var(--spacing-sm);
+  cursor: pointer;
 }
 
 .day--highlight {
   background-color: var(--background-color-secondary);
   border-radius: var(--border-radius-sm);
+}
+
+.day--selected {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
 }
 
 .typography--primary {

@@ -151,6 +151,26 @@ hr {
     width: 100px;
     height: 100px;
   }
+
+  &--color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    &--pto {
+      background-color: var(--color-ultra-red);
+    }
+
+    &--bday {
+      background-color: var(--color-blue-munsell);
+    }
+
+    &--year {
+      background-color: var(--color-lavender-floral);
+    }
+  }
 }
 
 .button {
@@ -241,6 +261,12 @@ hr {
     color: var(--color-primary);
   }
 
+  &--secondary {
+    font-size: 8px;
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+  }
+
   &--light {
     color: var(--color-light);
   }
@@ -248,10 +274,18 @@ hr {
 
 .day {
   padding: var(--spacing-sm);
+  cursor: pointer;
 
   &--highlight {
     background-color: var(--background-color-secondary);
     border-radius: var(--border-radius-sm);
+  }
+
+  &--selected {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
   }
 }
 
